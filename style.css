@@ -1,0 +1,60 @@
+/* ── Estilos globales ── */
+html, body, #map {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+
+  /* ── El mapa Leaflet ── */
+#map {
+    width: 600px;
+    height: 400px;
+}
+
+  /* ── Google “pac-card” UI ── */
+.pac-card {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    font-family: Roboto, Arial, sans-serif;
+    overflow: hidden;
+    width: 400px;
+}
+
+#title {
+    background: #4d90fe;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+.pac-controls {
+    display: inline-block;
+    padding: 5px 8px;
+}
+
+.pac-controls label {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#pac-container {
+    padding: 8px 12px;
+}
+
+#pac-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#strict-bounds-selector {
+    margin-top: 4px;
+}

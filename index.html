@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Domino’s Pizza Delivery</title>
+    <link rel="shortcut icon" href="img/Dominos-Logo.png" type="image/x-icon">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <!--  ── Google “pac-card” UI ── -->
+    <div class="pac-card" id="pac-card">
+        <div id="title">Search Location</div>
+
+        <div id="type-selector" class="pac-controls">
+        <input type="radio" name="type" id="changetype-all" checked />
+        <label for="changetype-all">All</label>
+
+        <input type="radio" name="type" id="changetype-address" />
+        <label for="changetype-address">Address</label>
+
+        <input type="radio" name="type" id="changetype-establishment" />
+        <label for="changetype-establishment">Establishment</label>
+
+        <input type="radio" name="type" id="changetype-geocode" />
+        <label for="changetype-geocode">Geocode</label>
+        </div>
+
+        <div id="strict-bounds-selector" class="pac-controls">
+        <input type="checkbox" id="use-location-bias" checked />
+        <label for="use-location-bias">Bias to map viewport</label>
+
+        <input type="checkbox" id="use-strict-bounds" />
+        <label for="use-strict-bounds">Strict bounds</label>
+        </div>
+
+        <div id="pac-container">
+        <input id="pac-input" type="text" placeholder="Escribe una dirección…" />
+        </div>
+    </div>
+
+    <!-- Tu mapa Leaflet -->
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
+    <!-- Tu código principal -->
+    <script src="index.js"></script>
+    <!-- Google Places Autocomplete (solo UI) -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwzn8b3sKRX3Ik_cyNRbVjX3cV_779z2Q&libraries=places&callback=initAutocomplete"
+        async
+        defer
+    ></script>
+</body>
+</html>
